@@ -5,11 +5,13 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
 
-    <Grid RowDefinitions="Auto,Auto, *">
+    <Grid RowDefinitions="Auto,Auto,Auto, *">
         <Label Grid.Row="0" Text="Clicking On Text does not Work on IOS">
             <Label.GestureRecognizers>
                 <TapGestureRecognizer Tapped="Button_Clicked" />
             </Label.GestureRecognizers>
         </Label>        
+        <RadioButton Grid.Row="1" Content="test"/>
+        <Button Grid.Row="2" Text="Click me to close" Clicked="Button_Clicked"/>
     </Grid>
 </toolkit:Popup>
