@@ -21,8 +21,10 @@ namespace MauiApp7
                 CounterBtn.Text = $"Clicked {count} times";
 
             SemanticScreenReader.Announce(CounterBtn.Text);
-
-            this.ShowPopup(new ButtonPopup());
+            
+            var popup = new ButtonPopup();
+            this.AddLogicalChild(popup);
+            this.ShowPopup(popup);
         }
     }
 }
